@@ -1,6 +1,7 @@
+import 'dotenv/config';
 
 import express from 'express';
-require('dotenv').config();
+
 const form = document.querySelector('#searchForm');
 const cityInput = document.querySelector('#cityname');
 const searchButton = document.querySelector('#searchButton'); 
