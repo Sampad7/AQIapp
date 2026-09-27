@@ -1,3 +1,4 @@
+require('dotenv').config();
 const form = document.querySelector('#searchForm');
 const cityInput = document.querySelector('#cityname');
 const searchButton = document.querySelector('#searchButton'); 
@@ -17,7 +18,7 @@ searchButton.addEventListener('click', async (event) => {
     event.preventDefault();
     const cityName = cityInput.value;
     if (cityName) {
-        const token = '5dc81981a0f1e5fb0c89dc651e4dc66dfbd61235';
+        const token = process.env.API_KEY; // Access the API key from environment variables
         searchStations(cityName, token);
     }
 });
